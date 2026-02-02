@@ -1,4 +1,3 @@
-
 export enum RequestStatus {
   PENDING = 'PENDING',
   QUEUED = 'QUEUED',
@@ -6,12 +5,14 @@ export enum RequestStatus {
   SKIPPED = 'SKIPPED',
 }
 
-export type Region = 'Global' | 'EU' | 'DE' | 'US' | 'UK';
+// Changed to string to allow specific countries (e.g. 'FR', 'AT') if you update your DB script later
+export type Region = string; 
 
 export interface Service {
   id: string;
   name: string;
-  category: 'Social' | 'Shopping' | 'Utility' | 'Data Broker' | 'Ad Tech' | 'Finance' | 'Travel' | 'Other' | 'Imported';
+  // Changed to string so imported categories don't break the app
+  category: string; 
   region: Region;
   email?: string;
   confidence?: 'High' | 'Medium' | 'Low' | 'Manual';
@@ -27,8 +28,8 @@ export interface UserProfile {
   email: string;
   address?: string;
   phone?: string;
-  includeSpeculative: boolean; // "Auf Verdacht"
-  isEuCitizen: boolean; // Triggers GDPR Art 3 for non-EU companies
+  includeSpeculative: boolean; 
+  isEuCitizen: boolean; 
   templateStyle: TemplateStyle;
   language: 'EN' | 'DE';
 }
