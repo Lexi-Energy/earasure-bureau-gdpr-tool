@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ErasureBot - GDPR Automator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Lora', 'serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              paper: {
+                50: '#faf9f6', // Off-white
+                100: '#f5f5f4', // Stone 100
+                200: '#e7e5e4',
+                300: '#d6d3d1',
+              },
+              ink: {
+                400: '#a8a29e',
+                500: '#78716c',
+                800: '#292524', // Warm Black
+                900: '#1c1917',
+              },
+              stamp: {
+                500: '#ef4444',
+                600: '#dc2626',
+                700: '#b91c1c', // Deep Red
+                800: '#991b1b',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f5f5f4; /* Stone 100 */
+        color: #1c1917; /* Stone 900 */
+        font-family: 'Inter', sans-serif;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Lora', serif;
+      }
+
+      /* Custom scrollbar for lists - lighter theme */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #e7e5e4; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #a8a29e; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #78716c; 
+      }
+      
+      .paper-shadow {
+        box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+      }
+      
+      .paper-card {
+        background-color: white;
+        border: 1px solid #e7e5e4;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- This script tag is CRITICAL for Vite to find your code -->
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

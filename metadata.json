@@ -1,0 +1,5 @@
+{
+  "name": "Copy of Annoy databrokers Bot - GDPR erasure Automator",
+  "description": "A privacy tool that helps users generate and send GDPR Article 17 'Right to Erasure' requests to companies and data brokers. emails get generated locally completely without data retention.",
+  "requestFramePermissions": []
+}
