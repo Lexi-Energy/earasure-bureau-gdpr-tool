@@ -5,13 +5,13 @@ export enum RequestStatus {
   SKIPPED = 'SKIPPED',
 }
 
-// Changed to string to allow specific countries (e.g. 'FR', 'AT') if you update your DB script later
+// UNLOCKED: Changed from strict union to string to allow any country code from the DB
 export type Region = string; 
 
 export interface Service {
   id: string;
   name: string;
-  // Changed to string so imported categories don't break the app
+  // UNLOCKED: Changed to string to support all the new scraper categories
   category: string; 
   region: Region;
   email?: string;
@@ -28,8 +28,8 @@ export interface UserProfile {
   email: string;
   address?: string;
   phone?: string;
-  includeSpeculative: boolean; 
-  isEuCitizen: boolean; 
+  includeSpeculative: boolean;
+  isEuCitizen: boolean;
   templateStyle: TemplateStyle;
   language: 'EN' | 'DE';
 }
